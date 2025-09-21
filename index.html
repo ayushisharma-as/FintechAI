@@ -1,0 +1,348 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Live Fintech AI Solutions</title>
+  <link rel="stylesheet" href="style.css">
+  <link href="https://fonts.googleapis.com/css?family=JetBrains+Mono:400,700&display=swap" rel="stylesheet">
+</head>
+<body data-color-scheme="dark">
+  <!-- Navigation -->
+  <nav class="nav">
+    <div class="container">
+      <div class="nav__content">
+        <div class="nav__logo">
+          <h3>Fintech AI</h3>
+        </div>
+        <ul class="nav__menu">
+          <li><a href="#hero" class="nav__link">Home</a></li>
+          <li><a href="#market" class="nav__link">Market</a></li>
+          <li><a href="#solutions" class="nav__link">Solutions</a></li>
+          <li><a href="#trading-copilot" class="nav__link">Trading Co-Pilot</a></li>
+          <li><a href="#architecture" class="nav__link">Architecture</a></li>
+          <li><a href="#contact" class="nav__link">Contact</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Hero -->
+  <section id="hero" class="hero">
+    <div class="container">
+      <div class="hero__content">
+        <h1 class="hero__title">Live Fintech AI Solutions</h1>
+        <h2 class="hero__subtitle">Build AI that keeps up with financial markets in real time</h2>
+        <p class="hero__description">
+          The global fintech market, valued at $44.08 billion in 2024, represents a transformative 
+          opportunity to revolutionize financial services through cutting-edge artificial intelligence. 
+          Our real-time AI solutions enable financial institutions to process millions of transactions, 
+          detect anomalies, and make critical decisions with unprecedented speed and accuracy.
+        </p>
+        <div class="hero__actions">
+          <button class="btn btn--primary btn--lg" onclick="scrollToSection('solutions')">Explore Solutions</button>
+          <button class="btn btn--outline btn--lg" onclick="scrollToSection('architecture')">View Architecture</button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Market Overview -->
+  <section id="market" class="market">
+  <div class="container">
+    <h2 class="section__title">Market Overview</h2>
+    <div class="market__stats">
+      <div class="stat-card">
+        <h3 class="stat-card__value" data-target="44.08">$0B</h3>
+        <p class="stat-card__label">Current Market Size</p>
+      </div>
+      <div class="stat-card">
+        <h3 class="stat-card__value" data-target="59.1">$0B</h3>
+        <p class="stat-card__label">Projected 2030</p>
+      </div>
+      <div class="stat-card">
+        <h3 class="stat-card__value" data-target="4.2">0%</h3>
+        <p class="stat-card__label">Annual Growth Rate</p>
+      </div>
+    </div>
+    
+    <!-- Fintech Market Growth Chart -->
+    <div class="chart-container">
+      <canvas id="marketChart" height="160"></canvas>
+    </div>
+    
+    <!-- Live AAPL Price Chart -->
+    <h3 class="section__subtitle live-aapl-title">Live AAPL Price Chart</h3>
+    <div class="chart-container">
+      <canvas id="liveChart" height="120"></canvas>
+    </div>
+  </div>
+</section>
+
+  <!-- Solutions Section -->
+  <section id="solutions" class="solutions">
+    <div class="container">
+      <h2 class="section__title">Core AI Solutions</h2>
+      <div class="solutions__grid">
+        <!-- Real-Time Trading Co-Pilot Card -->
+        <div class="solution-card" data-solution="0">
+          <div class="solution-card__header">
+            <h3 class="solution-card__title">Real-Time Trading Co-Pilot</h3>
+            <p class="solution-card__description">
+              AI systems that analyze market data and generate actionable trading signals 
+              in real time using reinforcement learning and deep neural networks.
+            </p>
+          </div>
+          <div class="solution-card__features">
+            <h4>Key Features</h4>
+            <ul>
+              <li>Market data analysis with millisecond latency</li>
+              <li>Advanced ML algorithms (LSTM, CNN)</li>
+              <li>Reinforcement learning adaptation</li>
+              <li>News sentiment analysis</li>
+              <li>Risk management protocols</li>
+            </ul>
+          </div>
+          <div class="solution-card__performance">
+            <div class="performance-metric"><span class="metric-value">66%</span><span class="metric-label">Avg Returns</span></div>
+            <div class="performance-metric"><span class="metric-value">92%</span><span class="metric-label">Success Rate</span></div>
+          </div>
+        </div>
+        <!-- Live Sanctions Monitor -->
+        <div class="solution-card" data-solution="1">
+          <div class="solution-card__header">
+            <h3 class="solution-card__title">Live Sanctions Monitor</h3>
+            <p class="solution-card__description">
+              Real-time compliance screening systems that monitor transactions against 
+              sanctions lists with advanced entity matching capabilities.
+            </p>
+          </div>
+          <div class="solution-card__features">
+            <h4>Key Features</h4>
+            <ul>
+              <li>Fuzzy matching algorithms</li>
+              <li>Entity resolution and NLP</li>
+              <li>Continuous list updates</li>
+              <li>Multi-jurisdiction compliance</li>
+              <li>Real-time transaction screening</li>
+            </ul>
+          </div>
+          <div class="solution-card__performance">
+            <div class="performance-metric"><span class="metric-value">&lt;350ms</span><span class="metric-label">Processing Speed</span></div>
+            <div class="performance-metric"><span class="metric-value">95%</span><span class="metric-label">False Pos. Reduction</span></div>
+          </div>
+        </div>
+        <!-- KYC Behavioral Anomaly Detector -->
+        <div class="solution-card" data-solution="2">
+          <div class="solution-card__header">
+            <h3 class="solution-card__title">KYC Behavioral Anomaly Detector</h3>
+            <p class="solution-card__description">
+              AI systems that continuously monitor customer behavior patterns to identify 
+              suspicious activities and potential fraud in real time.
+            </p>
+          </div>
+          <div class="solution-card__features">
+            <h4>Key Features</h4>
+            <ul>
+              <li>Dynamic customer profiling</li>
+              <li>Behavioral biometric analysis</li>
+              <li>Unsupervised anomaly detection</li>
+              <li>Continuous learning mechanisms</li>
+              <li>Real-time fraud prevention</li>
+            </ul>
+          </div>
+          <div class="solution-card__performance">
+            <div class="performance-metric"><span class="metric-value">98.7%</span><span class="metric-label">Detection Accuracy</span></div>
+            <div class="performance-metric"><span class="metric-value">&lt;5%</span><span class="metric-label">False Positive Rate</span></div>
+          </div>
+        </div>
+        <!-- Market Risk & Anomaly Scanner -->
+        <div class="solution-card" data-solution="3">
+          <div class="solution-card__header">
+            <h3 class="solution-card__title">Market Risk & Anomaly Scanner</h3>
+            <p class="solution-card__description">
+              Sophisticated systems that monitor financial markets for unusual patterns, 
+              potential manipulation, and systemic risks in real time.
+            </p>
+          </div>
+          <div class="solution-card__features">
+            <h4>Key Features</h4>
+            <ul>
+              <li>Real-time market data analysis</li>
+              <li>Cross-asset correlation monitoring</li>
+              <li>Manipulation pattern detection</li>
+              <li>Portfolio risk assessment</li>
+              <li>Regulatory compliance monitoring</li>
+            </ul>
+          </div>
+          <div class="solution-card__performance">
+            <div class="performance-metric"><span class="metric-value">Millions/sec</span><span class="metric-label">Data Processing</span></div>
+            <div class="performance-metric"><span class="metric-value">Sub-second</span><span class="metric-label">Anomaly Det.</span></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Trading Co-Pilot & Risk Dashboard -->
+  <section id="trading-copilot" class="dashboard">
+    <h2>Real-Time Trading Co-Pilot <span class="badge live">Live</span></h2>
+    <div class="dashboard__row">
+      <div class="market-feed">
+        <h4>Market Feed</h4>
+        <ul id="market-feed-list"></ul>
+      </div>
+      <div class="trade-recommendation">
+        <h4>AI Trade Signal</h4>
+        <div id="ai-signal">
+          <!-- Signal injected here -->
+          <span class="explain-btn" onclick="showExplain()">?</span>
+        </div>
+        <button class="simulate-btn" onclick="simulateTrade()">Simulate Trade</button>
+        <div id="trade-pnl"></div>
+        <div id="modal-explain" class="modal-explain" style="display:none;">
+          <div class="modal-box">
+            <h3>Why this signal?</h3>
+            <p>
+              Our AI model analyzes the latest 30 prices, detects rising momentum, and checks for volume/spike anomalies.<br>
+              Right now, price is above its 10-min average, with a recent volume surge. Thus, the AI suggests <b>"Buy"</b>.
+            </p>
+            <button onclick="hideExplain()">Close</button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="market-risk-section">
+      <h2 class="no-margin-bottom">Market Risk & Anomaly Scanner <span class="badge live">Live</span></h2>
+      <div id="anomaly-alerts" class="stable">All markets stable</div>
+    </div>
+    <div class="risk-box">
+  <div class="risk-block">
+    <div class="risk-asset-label">BTC/USD</div>
+    <div class="risk-bar low">Risk 49%</div>
+  </div>
+  <div class="risk-block">
+    <div class="risk-asset-label">AAPL</div>
+    <div class="risk-bar low">Risk 21%</div>
+  </div>
+  <div class="risk-block">
+    <div class="risk-asset-label">NIFTY</div>
+    <div class="risk-bar medium">Risk 68%</div>
+  </div>
+  <div class="risk-block">
+    <div class="risk-asset-label">EUR/USD</div>
+    <div class="risk-bar low">Risk 9%</div>
+  </div>
+</div>
+
+
+  </section>
+
+  <!-- Architecture Section (You can insert your diagram image) -->
+  <section id="architecture" class="architecture">
+    <div class="container">
+      <h2 class="section__title">Technical Architecture</h2>
+      <!-- e.g. <img src="architecture.png" alt="Architecture" class="architecture-diagram"> -->
+      <div class="architecture__stack">
+        <div class="stack-layer"><h4>Application Layer</h4><div class="tech-tags"><span class="tech-tag">Kubernetes</span><span class="tech-tag">Docker</span></div></div>
+        <div class="stack-layer"><h4>AI/ML Engine</h4><div class="tech-tags"><span class="tech-tag">TensorFlow</span><span class="tech-tag">PyTorch</span></div></div>
+        <div class="stack-layer"><h4>Stream Processing</h4><div class="tech-tags"><span class="tech-tag">Apache Flink</span><span class="tech-tag">Spark Streaming</span></div></div>
+        <div class="stack-layer"><h4>Data Storage</h4><div class="tech-tags"><span class="tech-tag">Redis</span><span class="tech-tag">Snowflake</span></div></div>
+        <div class="stack-layer"><h4>Data Ingestion</h4><div class="tech-tags"><span class="tech-tag">Kafka</span><span class="tech-tag">API Gateway</span></div></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Implementation Challenges -->
+    <section class="challenges">
+        <div class="container">
+            <h2 class="section__title">Implementation Challenges</h2>
+            <div class="challenges__grid">
+                <div class="challenge-card">
+                    <h4>Regulatory Compliance</h4>
+                    <ul>
+                        <li>EU AI Act requirements</li>
+                        <li>FCA oversight</li>
+                        <li>Algorithmic transparency</li>
+                        <li>Audit trail maintenance</li>
+                    </ul>
+                </div>
+                <div class="challenge-card">
+                    <h4>Technical Implementation</h4>
+                    <ul>
+                        <li>Ultra-low latency requirements</li>
+                        <li>Real-time data processing</li>
+                        <li>Scalability challenges</li>
+                        <li>System reliability</li>
+                    </ul>
+                </div>
+                <div class="challenge-card">
+                    <h4>Data & Privacy</h4>
+                    <ul>
+                        <li>GDPR compliance</li>
+                        <li>Data security</li>
+                        <li>Privacy preservation</li>
+                        <li>Cross-border data transfer</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Future Trends -->
+    <section class="trends">
+        <div class="container">
+            <h2 class="section__title">Future Trends</h2>
+            <div class="trends__grid">
+                <div class="trend-card">
+                    <h4>Quantum Computing</h4>
+                    <p class="trend-description">
+                        Quantum-enhanced optimization for portfolio management and risk modeling
+                    </p>
+                    <p class="trend-impact">
+                        <strong>Impact:</strong> 10x faster Monte Carlo simulations
+                    </p>
+                </div>
+                <div class="trend-card">
+                    <h4>Generative AI</h4>
+                    <p class="trend-description">
+                        LLM integration for document analysis and regulatory compliance
+                    </p>
+                    <p class="trend-impact">
+                        <strong>Impact:</strong> Automated compliance reporting and natural language explanations
+                    </p>
+                </div>
+                <div class="trend-card">
+                    <h4>Edge Computing</h4>
+                    <p class="trend-description">
+                        Distributed AI architectures for reduced latency and improved resilience
+                    </p>
+                    <p class="trend-impact">
+                        <strong>Impact:</strong> Sub-millisecond response times and increased system resilience
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+  <!-- Contact/CTA -->
+  <section id="contact" class="contact">
+    <div class="container">
+      <div class="contact__content">
+        <h2 class="contact__title">Ready to Transform Your Financial Operations?</h2>
+        <p class="contact__description">
+          Get started with our live fintech AI solutions and join leading financial institutions 
+          in revolutionizing their operations with real-time artificial intelligence.
+        </p>
+        <div class="contact__actions">
+          <button class="btn btn--primary btn--lg">Schedule Demo</button>
+          <button class="btn btn--outline btn--lg">Download Whitepaper</button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>
